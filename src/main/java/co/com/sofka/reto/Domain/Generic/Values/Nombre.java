@@ -4,9 +4,9 @@ import co.com.sofka.domain.generic.ValueObject;
 
 import java.util.Objects;
 
-public class Locacion implements ValueObject<String> {
+public class Nombre implements ValueObject<String> {
     private final String value;
-    public Locacion(String value) {
+    public Nombre(String value) {
         this.value = Objects.requireNonNull(value);
     }
     public String value() {
@@ -17,8 +17,8 @@ public class Locacion implements ValueObject<String> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Locacion locacion = (Locacion) o;
-        return Objects.equals(value, locacion.value);
+        Nombre nombre = (Nombre) o;
+        return Objects.equals(value, nombre.value);
     }
 
     @Override
