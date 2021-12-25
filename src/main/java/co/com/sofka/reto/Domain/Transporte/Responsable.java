@@ -11,7 +11,7 @@ import co.com.sofka.reto.Domain.Transporte.Values.ResponsableID;
 import java.util.Objects;
 
 public class Responsable extends Entity<ResponsableID> {
-    private Nombre nombre;
+    private final Nombre nombre;
     private Localidad localidad;
     private Email email;
     private Telefono telefono;

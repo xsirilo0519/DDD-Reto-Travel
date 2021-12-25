@@ -11,7 +11,7 @@ import co.com.sofka.reto.Domain.Hotel.Values.RecreacionistaID;
 import java.util.Objects;
 
 public class Recreacionista extends Entity<RecreacionistaID> {
-    private Nombre nombre;
+    private final Nombre nombre;
     private Localidad localidad;
     private Email email;
     private Telefono telefono;

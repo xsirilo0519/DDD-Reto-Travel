@@ -10,7 +10,7 @@ import co.com.sofka.reto.Domain.Generic.Values.Telefono;
 import java.util.Objects;
 
 public class Guia extends Entity<GuiaID> {
-    private Nombre nombre;
+    private final Nombre nombre;
     private Localidad localidad;
     private Email email;
     private Telefono telefono;
