@@ -20,7 +20,7 @@ public class ExperienciaChange extends EventChange {
         });
 
         apply((GuiaAgregado event)->{
-            experiencia.AgregagrGuia(event.getGuiaID(),event.getNombre(),event.getTelefono(),event.getEmail(),event.getLocalidad());
+            experiencia.guia=new Guia(event.getGuiaID(),event.getNombre(),event.getLocalidad(),event.getEmail(),event.getTelefono());
         });
 
         apply((LocacionLugarActualizada event)->{
@@ -32,11 +32,11 @@ public class ExperienciaChange extends EventChange {
         });
 
         apply((LugarAgregado event)->{
-            experiencia.AgregarLugar(event.getLugarID(),event.getRango(),event.getLocacion());
+            experiencia.lugar=new Lugar(event.getLugarID(),event.getRango(),event.getLocacion());
         });
 
         apply((PlanAgregado event)->{
-            experiencia.AgregarPlan(event.getPlanID(),event.getDescripcion());
+            experiencia.plan=new Plan(event.getPlanID(),event.getDescripcion());
         });
 
         apply((RangoLugarActualizado event)->{
