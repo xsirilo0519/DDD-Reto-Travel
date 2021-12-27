@@ -1,5 +1,5 @@
 # Contexto
-Se realiza el modelamiento de la Empresa ColTurismo, a la cual se trabaja en el Dominio de Crear Experiencias.
+Se realiza el modelamiento de la Empresa ColTurismo, a la cual se realiza el modelado y analisis de Crear Experiencias.
 # Covertura
 ![](https://github.com/xsirilo0519/DDD-Reto-Travel/blob/main/Link%20All/Covertura/Captura.JPG)
 # Pauta 1
