@@ -7,6 +7,11 @@ import java.util.Objects;
 public class Email implements ValueObject<String> {
     private final String value;
     public Email(String value) {
+        if(!value.matches("\\S+@\\S+\\.\\S+")){
+            throw new IllegalArgumentException("Debe ingresar un correo valido");
+
+        }
+
         this.value = Objects.requireNonNull(value);
     }
     public String value() {

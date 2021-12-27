@@ -10,7 +10,10 @@ public class Cant_Cama implements ValueObject<Integer> {
         this.value = Objects.requireNonNull(value);
     }
     public Integer value() {
-        return value;
+        if (value<0) {
+            throw new IllegalArgumentException("El telefono no puede ser negativo");
+        }
+            return value;
     }
 
     @Override

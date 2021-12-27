@@ -7,6 +7,10 @@ import java.util.Objects;
 public class Nombre implements ValueObject<String> {
     private final String value;
     public Nombre(String value) {
+
+        if (!value.matches("^[\\p{L} .'-]+$")){
+            throw new IllegalArgumentException("El nombre debe contener solo letras");
+        }
         this.value = Objects.requireNonNull(value);
     }
     public String value() {

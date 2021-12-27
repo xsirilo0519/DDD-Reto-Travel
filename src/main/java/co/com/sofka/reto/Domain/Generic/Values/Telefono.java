@@ -7,6 +7,9 @@ import java.util.Objects;
 public class Telefono implements ValueObject<Double> {
     private final Double value;
     public Telefono(Double value) {
+        if (value<0){
+            throw new IllegalArgumentException("El telefono no puede ser negativo");
+        }
         this.value = Objects.requireNonNull(value);
     }
     public Double value() {

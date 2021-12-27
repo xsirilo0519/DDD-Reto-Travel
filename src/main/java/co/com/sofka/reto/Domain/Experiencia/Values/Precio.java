@@ -8,7 +8,10 @@ public class Precio implements ValueObject<Double> {
     private final Double value;
 
     public Precio(Double value) {
-        this.value = Objects.requireNonNull(value);
+        if (value<0) {
+            throw new IllegalArgumentException("El Precio no puede ser negativo");
+        }
+            this.value = Objects.requireNonNull(value);
     }
     public Double value() {
         return value;

@@ -7,7 +7,10 @@ import java.util.Objects;
 public class Capacidad implements ValueObject<Integer> {
     private final Integer value;
     public Capacidad(Integer value) {
-        this.value = Objects.requireNonNull(value);
+        if (value<2) {
+            throw new IllegalArgumentException("La capacidad no puede ser menor a 2");
+        }
+            this.value = Objects.requireNonNull(value);
     }
     public Integer value() {
         return value;
