@@ -3,10 +3,13 @@ package co.com.sofka.reto.Domain.Hotel;
 import co.com.sofka.domain.generic.EventChange;
 import co.com.sofka.reto.Domain.Hotel.Events.*;
 
+import java.util.ArrayList;
+
 public class HotelChange extends EventChange {
     public HotelChange(Hotel hotel){
         apply((HotelCreado event)->{
             hotel.nombre=event.getNombre();
+            hotel.habitacionList= new ArrayList<>();
         });
 
         apply((ActividadAgregada event)->{
