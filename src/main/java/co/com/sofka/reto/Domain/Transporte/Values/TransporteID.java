@@ -13,6 +13,5 @@ public class TransporteID extends Identity {
 
     public static TransporteID of(String id) {
         return new TransporteID(id);
-
     }
 }

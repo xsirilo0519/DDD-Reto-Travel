@@ -13,6 +13,5 @@ public class Placa extends Identity {
 
     public static Placa of(String id) {
         return new Placa(id);
-
     }
 }
