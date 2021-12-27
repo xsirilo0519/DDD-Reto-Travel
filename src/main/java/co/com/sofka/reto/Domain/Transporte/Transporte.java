@@ -101,4 +101,19 @@ public class Transporte extends AggregateEvent<TransporteID> {
         appendChange(new VehiculoAgregado(placa,capacidad,modelo));
     }
 
+    public Descripcion descripcion() {
+        return descripcion;
+    }
+
+    public Conductor conductor() {
+        return conductor;
+    }
+
+    public Vehiculo vehiculo() {
+        return vehiculo;
+    }
+
+    public Responsable responsable() {
+        return responsable;
+    }
 }
